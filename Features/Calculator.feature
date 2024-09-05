@@ -14,7 +14,7 @@ Scenario: Add two numbers
 
 @mytag
 Scenario: Launching Google and searching for Arsenal
-	Given Launch the google website
+	Given Launch the orangehrmlive website
 	When Search for 'Arsenal'
 	Then User is able to see results for Arsenal
 	 

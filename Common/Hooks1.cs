@@ -15,7 +15,6 @@ namespace PlayWrightSpecFlow.Common
             var chrome = playwright.Chromium;
             var browser = await chrome.LaunchAsync(new() { Headless = false });
             var page = await browser.NewPageAsync();
-            await page.GotoAsync("https://www.bing.com");
             await browser.CloseAsync();
         }
 

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayWrightSpecFlow", "PlayWrightSpecFlow.csproj", "{8147DEFE-77BF-4796-9382-E30929442BB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectModel", "..\PageObjectModel\PageObjectModel.csproj", "{7070606E-908B-4E56-935B-90D3DED29267}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectModel", "PageObjectModel\PageObjectModel.csproj", "{7070606E-908B-4E56-935B-90D3DED29267}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

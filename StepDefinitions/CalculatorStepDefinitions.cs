@@ -1,10 +1,15 @@
 using Microsoft.Playwright;
+using PageObjectModel.Flows;
+using PageObjectModel.Pages;
 
 namespace PlayWrightSpecFlow.StepDefinitions
 {
     [Binding]
     public sealed class CalculatorStepDefinitions
     {
+        LoginPage lPage = new LoginPage(page);
+        LoginFlow lFlow = new LoginFlow(lPage);
+
         // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
 
         [Given("the first number is (.*)")]
@@ -43,7 +48,7 @@ namespace PlayWrightSpecFlow.StepDefinitions
             throw new PendingStepException();
         }
 
-        [Given(@"Launch the google website")]
+        [Given(@"Launch the orangehrmlive website")]
         public void GivenLaunchTheGoogleWebsite()
         {
             
