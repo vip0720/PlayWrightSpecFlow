@@ -24,11 +24,11 @@ namespace PageObjectModel.Flows
         {
             await page.page.GotoAsync(url);
         }
-        public void LoginWithValidUser()
+        public async Task LoginWithValidUserAsync()
         {
             page.UserName.FillAsync(username);
             page.Password.FillAsync(password);
-            page.LoginButton.ClickAsync();
+            await page.LoginButton.ClickAsync();
         }
     }
 }

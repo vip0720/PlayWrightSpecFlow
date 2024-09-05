@@ -4,18 +4,21 @@ using TechTalk.SpecFlow;
 namespace PlayWrightSpecFlow.Common
 {
     [Binding]
-    public sealed class Hooks1
+    public class Hooks1
     {
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
 
+        public static IPage page;
+        public IBrowser browser;
+
+
         [BeforeTestRun]
-        public static async Task BeforeTest()
+        public  async Task BeforeTest()
         {
             using var playwright = await Playwright.CreateAsync();
             var chrome = playwright.Chromium;
-            var browser = await chrome.LaunchAsync(new() { Headless = false });
-            var page = await browser.NewPageAsync();
-            await browser.CloseAsync();
+            browser = await chrome.LaunchAsync(new() { Headless = false });
+            page = await browser.NewPageAsync();
         }
 
         [BeforeScenario("@tag1")]

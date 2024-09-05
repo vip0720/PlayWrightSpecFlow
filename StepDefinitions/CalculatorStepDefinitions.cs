@@ -1,11 +1,12 @@
 using Microsoft.Playwright;
 using PageObjectModel.Flows;
 using PageObjectModel.Pages;
+using PlayWrightSpecFlow.Common;
 
 namespace PlayWrightSpecFlow.StepDefinitions
 {
     [Binding]
-    public sealed class CalculatorStepDefinitions
+    public sealed class CalculatorStepDefinitions: Hooks1
     {
         LoginPage lPage = new LoginPage(page);
         LoginFlow lFlow = new LoginFlow(lPage);
